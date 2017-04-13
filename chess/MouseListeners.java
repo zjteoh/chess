@@ -64,6 +64,8 @@ public class MouseListeners implements MouseListener , MouseMotionListener
 	@Override
 	synchronized public void mouseReleased(MouseEvent event) 
 	{
+		if(defaultCoorX == -1 && defaultCoorY == -1) return;
+		
 		dragPiece.setX(defaultCoorX);
 		dragPiece.setY(defaultCoorY);
 		
@@ -162,13 +164,16 @@ public class MouseListeners implements MouseListener , MouseMotionListener
 
 	 	//dragPiece = null;
 		chess.repaint();
+		defaultCoorX = -1;
+		defaultCoorY = -1;
+		
 	}
 
 
 	@Override
 	public void mouseDragged(MouseEvent event) 
 	{
-		if(dragPiece != null)
+		if(dragPiece != null && defaultCoorX != -1 && defaultCoorY != -1)
 		{
 			dragPiece.setX(event.getX()-X_OFFSET/2);
 			dragPiece.setY(event.getY()-Y_OFFSET/2);
