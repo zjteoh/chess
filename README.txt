@@ -1,7 +1,3 @@
-YET-TO-BE-IMPLEMENTED
+# Chess App 
 
-1) Check/Checkmate 
-
-2) Pawn double move in first move 
-
-2) Refined GUI
+This is a Java chess application that connects two players using peer-to-peer connection. Allow two players to connect simply by accessing the right IP address and port. Additionally, both players can also communicate with the in-built chatbox. 
