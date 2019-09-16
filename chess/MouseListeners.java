@@ -43,7 +43,7 @@ public class MouseListeners implements MouseListener , MouseMotionListener
 	}
 
 	@Override
-	synchronized public void mousePressed(MouseEvent event) {
+	public void mousePressed(MouseEvent event) {
 			int coorX = event.getX();
 			int coorY = event.getY();
 					
@@ -62,7 +62,7 @@ public class MouseListeners implements MouseListener , MouseMotionListener
 	}
 
 	@Override
-	synchronized public void mouseReleased(MouseEvent event) 
+	public void mouseReleased(MouseEvent event) 
 	{
 		if(defaultCoorX == -1 && defaultCoorY == -1) return;
 		
