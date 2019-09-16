@@ -88,7 +88,7 @@ public class Client extends Player
 		}
     }
 
-    class MoveListener extends Thread
+    class MoveListener
     {
     	@Override
     	public void run()
