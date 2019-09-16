@@ -15,7 +15,7 @@ public class MoveValidator
 	}
 
 	
-	synchronized public boolean testMove(int x, int y)
+	public boolean testMove(int x, int y)
 	{
 		boolean valid = false;
 		type = dragPiece.getType();
@@ -92,7 +92,7 @@ public class MoveValidator
 		return valid;
 	}
 	
-	synchronized public boolean moveDiagonal(int x,int y)
+	public boolean moveDiagonal(int x,int y)
 	{
 		boolean valid = false;
 				
@@ -160,7 +160,7 @@ public class MoveValidator
 		}
 	}
 	
-	synchronized public boolean moveStraightCol(int x,int y)
+	public boolean moveStraightCol(int x,int y)
 	{
 		boolean valid = false;
 		
@@ -194,7 +194,7 @@ public class MoveValidator
 	}
 	
 	
-	synchronized public boolean moveStraightRow(int x,int y)
+	public boolean moveStraightRow(int x,int y)
 	{
 		boolean valid = false;
 		
@@ -226,7 +226,7 @@ public class MoveValidator
 		return valid;
 	}
 	
-	synchronized public boolean pawnAttack(int x,int y)
+	public boolean pawnAttack(int x,int y)
 	{
 		boolean valid = false; 
 		if(          (dragPiece.getCol()-y == 1) && (Math.abs(dragPiece.getRow() - x) == 1) && (dragPiece.getColor() == 0 )              )
