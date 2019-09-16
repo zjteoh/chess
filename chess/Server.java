@@ -78,7 +78,7 @@ public class Server extends Player
     }
 
     
-    class MoveListener implements Runnable
+    class MoveListener
     {
     	@Override
     	public void run()
