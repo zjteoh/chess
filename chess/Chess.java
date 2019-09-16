@@ -134,7 +134,7 @@ public class Chess extends JPanel
 	}
 	
 	@Override
-	synchronized protected void paintComponent(Graphics g)
+	protected void paintComponent(Graphics g)
 	{
 		g.drawImage(this.background, 0, 0, null);
 		
@@ -173,7 +173,7 @@ public class Chess extends JPanel
 	}
 	
 	
-	synchronized public boolean setOpponentMoves(int bRow,int bCol, int aRow, int aCol)
+	public boolean setOpponentMoves(int bRow,int bCol, int aRow, int aCol)
 	{
 		
 		if((pieces[bRow][bCol] == pieces[aRow][aCol])) return false;
